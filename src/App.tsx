@@ -10,10 +10,9 @@ import "./App.css";
 
 export default function App() {
   const changeTheme = () => {
-    const themeLink = document.getElementById('theme-link') as HTMLAnchorElement;
-    if (themeLink) {
-      themeLink.href.includes('green') ? (themeLink.href = 'theme-blue.css') : (themeLink.href = 'theme-green.css');
-    }
+    const links = document.querySelectorAll("link[name='theme']") as NodeListOf<HTMLLinkElement>;
+    links[0].disabled = !links[0].disabled;
+    links[1].disabled = !links[1].disabled
   }
   return (
     <div className="app container">
