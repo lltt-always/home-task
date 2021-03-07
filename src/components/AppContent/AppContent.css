@@ -1,0 +1,4 @@
+.app-content {
+  background-color: var(--content-background);
+  height: 100%;
+}
